@@ -9,12 +9,12 @@
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Fossil SCM - An Introduction</h1>
+		<p>Suresh Nelamangala, @fulstacker</p>
 	</header>
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+		<h2>Fossil SCM - For the Enterprise</h2>
+		<p>Brought to you by <a href="http://pepelsbey.net">@fulstacker</a></p>
 		<img src="pictures/cover.jpg" alt="" class="cover">
 		<!--
 			To apply styles to the certain slides
@@ -40,140 +40,87 @@
 		</style>
 	</section>
 	<section class="slide">
-		<h2>Shower key features</h2>
+		<h2>Fossil key features</h2>
 		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
+			<li>Fully Integrated Bug Tracking, Wiki, and Technotes </li>
+			<li>Built-in Web Interface</li>
+			<li>Self-Contained </li>
+			<li>Simple Networking - http(s) / SSH</li>
+			<li>Fully Flexible : Four ways of server configuration</li>
+			<li>AutoSync</li>
+            <li>Roboust and Reliable</li>
+            <li>Free and Open Source - BSD License</li>
 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+
 	</section>
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>The Concept</h2>
+		<p style="font-size:16px">Fossil is a single-EXE, cross-platform, distributed source control management program written by SQLite author <br><strong>Dr. Richard Hipp.</strong> Unsurprisingly, data is saved in an SQLite database file, making it very easy to back up.
+A project resides in one or more repositories. Each change ("commit", a.k.a. check-in) is identified by an "artifact ID", which can refer either to a specific change made to a specific file, or to the whole commit.
+"At its lowest level, a Fossil repository consists of an unordered set of immutable "artifacts". You might think of these artifacts as "files", since in many cases the artifacts exactly correspond to source code files that are stored in the Fossil repository. But other "control artifacts" are also included in the mix. These control artifacts define the relationships between artifacts - which files go together to form a particular version of the project, who checked in that version and when, what was the check-in comment, what wiki pages are included with the project, what are the edit histories of each wiki page, what bug reports or tickets are included, who contributed to the evolution of each ticket, and so forth, and so on."
 	</section>
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+		<h2>Main commands for local use</h2>
+		<p class="double" style="font-size:12px"><b>add:</b> Adds new files to the next commit; must run "commit" afterwards for this file to actually be added to the repository
+<br><b>changes:</b> Shows changes made to files in the work directory; if no output, it means that no checked out files have been modified yet<br>
+<b>close:</b> Closes the connection to the repo, ie. the _FOSSIL_ file in the work directory<br>
+<b>commit:</b> Saves all changes to the repository, eg. add/remove files, add changes, etc.
+<br><b>extras: </b>Lists files in the work directory and below that Fossil doesn't track, because they haven't been added and commited to the repo
+<br><b>info:</b> Provides information about the current tree (if no argument given) or a particular object (otherwise). See "changes" and "status"
+<br><b>finfo: </b>Infos on a specific file
+<br><b>info:</b> Infos about the repo
+<br><b>ls:</b> Lists files that Fossil tracks
+<br><b>new:</b> Creates a new repo
+       <br><b>open:</b>  Opens the connection to the repo, creating a _FOSSIL_ file in the current work directory
+<br><b>mv:</b> Same as "rename"
+            <br><b>revert:</b> Forgets changes to one or all files that haven't been commited yet
+            <br><b>rm:</b> Same as "delete". Deletes files from the repository (but not from the work directory). From now on, the file(s) will no longer be part of the repository, altough all versions until then are still available
+            <br><b>search:</b> Searches for any comment that matches the pattern
+            <br><b>status:</b> Same as "changes", but with additional infos about changes made to checked-out files, if any, ie. status = info + changes
+            <br><b>tag: </b>Add a tag to a revision. Can be used either when commiting changes or later
+            <br><b>undo:</b> Cancels "revert"</p>
 	</section>
+
 	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-	<section class="slide">
-		<h2>Serious citations</h2>
+		<h2>Up and running in 5mn as a single user</h2>
 		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
+
+				<p class="double">cd c:\ <br>
+fossil new sample.repo <br>
+
+cd c:\temp <br>
+fossil open c:\sample.repo<br>
+
+notepad dummy.c<br>
+
+mkdir test<br>
+cd test<br>
+notepad dummy2.c<br>
+
+fossil add .<br>
+fossil commit -m "Original files"<br>
+
+notepad dummy2.c<br>
+
+fossil changes<br>
+
+fossil commit -m "Edited test\dummy2.c.</p>
+
+
 		</figure>
 	</section>
 	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</section>
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-	<section class="slide">
-		<h2>Inner navigation</h2>
+		<h2>Useful Links</h2>
 		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
+			<li>Fossil intelliJ plugin : git@github.com:irengrig/fossil4idea.git</li>
+			<li class="next">Jenkins-Fossil-Adaptor : git@github.com:rjperrella/jenkins-fossil-adapter.git</li>
+			<li class="next">Fossil Vim Plugin : git@github.com:mtvee/vim-fossil.git</li>
+			<li class="next">Shell Scripting With Fossil : git@github.com:benpop/fossil-scripts.git</li>
+			<li class="next">More Scripts: git@github.com:jgbreezer/fossil-tools.git</li>
 		</ol>
 	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
+
+
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
